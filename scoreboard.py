@@ -15,7 +15,7 @@ class Scoreboard(Turtle):
         self.speed("fastest")
         self.goto(0, 250)
         self.score = 0
-        with open(file="/Users/insse/OneDrive/desktop/data.txt") as data:
+        with open(file="data.txt") as data:
             self.high_score = int(data.read())
         self.update_scoreboard()
 
@@ -27,7 +27,7 @@ class Scoreboard(Turtle):
         if self.score > self.high_score:
             self.high_score = self.score
             self.score = 0
-            with open("/Users/insse/OneDrive/data.txt", mode="w") as data:
+            with open("data.txt", mode="w") as data:
                 data.write(str(self.high_score))
         self.update_scoreboard()
 
